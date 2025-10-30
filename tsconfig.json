@@ -18,12 +18,22 @@
         "name": "next"
       }
     ],
+    "baseUrl": "src",
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@/*": ["./*"],
+      "@assets/*": ["assets/*"]
+    },
+    "ignoreDeprecations": "6.0"
   },
   "include": [
+    // "next-env.d.ts",
+    // "**/*.ts",
+    // "**/*.tsx",
+    // ".next/types/**/*.ts",
+    // ".next/dev/types/**/*.ts",
+    // "**/*.mts"
     "next-env.d.ts",
+    "src/types/**/*.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
