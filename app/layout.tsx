@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { CssBaseline, ThemeProvider } from "@mui/material";
-import theme from "@/theme/theme";
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import theme from "@/theme/theme";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,11 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-foreground text-background">
+      <body className="bg-foreground text-background min-h-screen flex flex-col">
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Navbar />
-          {children}
+          <main className="flex-1 w-full">{children}</main> <Footer />
         </ThemeProvider>
       </body>
     </html>

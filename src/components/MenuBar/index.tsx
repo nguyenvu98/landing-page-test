@@ -1,8 +1,7 @@
 "use client";
 
-import React from "react";
-import HowToPlay from "@/assets/image/HowToPlay.png";
 import Cashback from "@/assets/image/Cashback.png";
+import HowToPlay from "@/assets/image/HowToPlay.png";
 import NewImg from "@/assets/image/New.png";
 import Race from "@/assets/image/Race.png";
 import Roadmaps from "@/assets/image/Roadmaps.png";
@@ -20,26 +19,27 @@ const MENU_ITEMS = [
 
 export default function MenuBar() {
   return (
-    <nav className="w-full overflow-x-auto no-scrollbar py-4">
-      <div
-        className="
+    <nav className="w-full overflow-x-hidden py-4">
+      <div className="w-[80%] max-w-full mx-auto px-1 sm:px-2 md:px-4 lg:px-6">
+        <div
+          className="
           flex 
           items-center 
           justify-center 
-          gap-2 
-          sm:gap-4 
-          md:gap-8 
-          lg:gap-24
-          xl:gap-36
+            gap-6
+          sm:gap-16
+          md:gap-20
+          lg:gap-28
+		  xl:gap-36
+          2xl:gap-50
 
-          px-2 sm:px-4 md:px-6
-          whitespace-nowrap
+          flex-nowrap
         "
-      >
-        {MENU_ITEMS.map((item, idx) => (
-          <button
-            key={idx}
-            className="
+        >
+          {MENU_ITEMS.map((item, idx) => (
+            <button
+              key={idx}
+              className="
               flex 
               flex-col 
               items-center 
@@ -47,23 +47,24 @@ export default function MenuBar() {
               shrink-0
               transition-transform 
               hover:scale-105 
-              p-2
+          
             "
-          >
-            <div className="relative w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10">
-              <Image
-                src={item.icon as any}
-                alt={item.label}
-                width={40}
-                height={40}
-                className="object-contain"
-              />
-            </div>
-            <span className="mt-1 text-[10px] sm:text-xs text-gray-400 text-center">
-              {item.label}
-            </span>
-          </button>
-        ))}
+            >
+              <div className="relative w-6 h-6 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 xl:w-10 xl:h-10 2xl:w-12 2xl:h-12">
+                <Image
+                  src={item.icon as any}
+                  alt={item.label}
+                  width={80}
+                  height={80}
+                  className="object-contain w-full h-full"
+                />
+              </div>
+              <span className="mt-0.5 sm:mt-1 text-[12px] sm:text-[10px] md:text-xs lg:text-sm xl:text-base text-gray-400 text-center whitespace-nowrap">
+                {item.label}
+              </span>
+            </button>
+          ))}
+        </div>
       </div>
     </nav>
   );

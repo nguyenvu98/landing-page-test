@@ -1,6 +1,5 @@
-import React from "react";
+import MultipleSwiper from "./MultipleSwiper";
 import SingleSwiper from "./SIngleSwiper";
-import MultipleSwiper from "./MutipleSwiper";
 
 interface SwiperComponentProps {
   type?: "single" | "multiple";
