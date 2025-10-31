@@ -1,4 +1,3 @@
-// src/components/Navbar.tsx
 "use client";
 
 import React, { useState } from "react";
@@ -44,7 +43,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="w-full h-16 flex items-center justify-between px-6 border-b border-[#383A42]">
+      <div className="w-full h-16 flex items-center justify-between px-6 border-b border-[#383A42] bg-[#131415]">
         <div className="flex items-center gap-8">
           <Image
             src={LogoImg}
